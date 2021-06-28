@@ -7,19 +7,19 @@ module.exports = api => {
       '@xstyled/babel-preset-emotion-css-prop',
     ],
     'plugins': [
-      [
-        '@emotion',
-        {
-          importMap: {
-            '@xstyled/emotion': {
-              default: {
-                canonicalImport: ['@emotion/styled', 'default'],
-                styledBaseImport: ['@xstyled/emotion', 'default'],
-              }
-            }
-          }
-        }
-      ]
+      // [
+      //   '@emotion',
+      //   {
+      //     importMap: {
+      //       '@xstyled/emotion': {
+      //         default: {
+      //           canonicalImport: ['@emotion/styled', 'default'],
+      //           styledBaseImport: ['@xstyled/emotion', 'default'],
+      //         }
+      //       }
+      //     }
+      //   }
+      // ]
     ]
   }
 }

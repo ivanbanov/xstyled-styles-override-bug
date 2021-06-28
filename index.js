@@ -1,15 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import styled, { ThemeProvider } from '@xstyled/emotion'
+import styled, { x, ThemeProvider } from '@xstyled/emotion'
 
-const Foo = styled.div({
-  backgroundColor: 'error',
-})
+const Box = x.div
 
-const Bar = styled.div({
-  backgroundColor: 'info',
-  color: 'white',
-})
+const InfoBox = styled(Box)({ backgroundColor: 'info' })
+const ErrorBox = styled(Box)({ backgroundColor: 'error' })
+const SuccessBox = styled(Box)({ backgroundColor: 'success' })
 
 const App = () => (
   <ThemeProvider theme={{ colors: {
@@ -17,8 +14,9 @@ const App = () => (
     success: 'green',
     info: 'blue',
   }}}>
-    <Foo>Foo</Foo>
-    <Bar>Bar</Bar>
+    <InfoBox backgroundColor='black'>Info</InfoBox>
+    <ErrorBox backgroundColor='black'>Error</ErrorBox>
+    <SuccessBox backgroundColor='black'>Success</SuccessBox>
   </ThemeProvider>
 )
 
